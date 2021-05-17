@@ -30,6 +30,9 @@ export const ListItem = styled.li`
   padding: 10px;
   margin: 10px 0;
 
+  border-right: 5px solid
+    ${(props) => (props.amount < 0 ? "#c0392b" : "#2ecc71")};
+
   &:hover ${DeleteButton} {
     opacity: 1;
   }

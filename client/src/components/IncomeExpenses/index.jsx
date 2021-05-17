@@ -5,6 +5,7 @@ import {
   MoneyMinus,
   MoneyPlus,
 } from "./IncomeExpenses.styled.";
+import { numberWithCommas } from "../../utils/format";
 
 const IncomeExpenses = () => {
   const { transactions } = useContext(GlobalContext);
@@ -24,11 +25,11 @@ const IncomeExpenses = () => {
     <IncExpContainer>
       <div>
         <h4>Income</h4>
-        <MoneyPlus>+${income}</MoneyPlus>
+        <MoneyPlus>+${numberWithCommas(income)}</MoneyPlus>
       </div>
       <div>
         <h4>Expense</h4>
-        <MoneyMinus>-${expense}</MoneyMinus>
+        <MoneyMinus>-${numberWithCommas(expense)}</MoneyMinus>
       </div>
     </IncExpContainer>
   );
